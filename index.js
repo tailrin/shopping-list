@@ -25,10 +25,9 @@ function handleShoppingListClicks(){
     $(e.currentTarget).closest('li').remove();
   });
 
-  $('.shopping-item-toggle').click(e => {
+  $('.shopping-item-controls').click(e => {
     e.preventDefault();
-    $(e.currentTarget).closest('li')
-    .toggleClass('shopping-item__checked');
+    $(e.currentTarget).siblings().first().toggleClass('shopping-item__checked');
     
   });
 } 
