@@ -19,17 +19,18 @@ $('#js-shopping-list-form').on('submit', event => {
 });
 
 
-function handleShoppingListClicks(){
+function handleDeleteClicks(){
   $('.shopping-item-delete').click(e => {
     e.preventDefault();
     $(e.currentTarget).closest('li').remove();
   });
-
-  $('.shopping-item-controls').click(e => {
-    e.preventDefault();
-    $(e.currentTarget).siblings().first().toggleClass('shopping-item__checked');
-    
-  });
 } 
+
+function handleCheckClicks(){
+   $('.shopping-item-controls').click(e => {
+       e.preventDefault();
+      $(e.currentTarget).siblings().first().toggleClass('shopping-item__checked'); 
+  });
+}
 
 //handleShoppingListClicks();
