@@ -27,7 +27,7 @@ function handleDeleteClicks(){
 } 
 
 function handleCheckClicks(){
-   $('.shopping-item-toggle').click(e => {
+   $('.shopping-item').click(e => {
        e.preventDefault();
       $(e.currentTarget).siblings().first().toggleClass('shopping-item__checked'); 
   });
