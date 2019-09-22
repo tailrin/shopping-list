@@ -32,5 +32,8 @@ function handleCheckClicks(){
       $(e.currentTarget).siblings().first().toggleClass('shopping-item__checked'); 
   });
 }
-
-//handleShoppingListClicks();
+function handleShoppingListClicks(){
+  handleCheckClicks();
+  handleDeleteClicks();
+}
+$(handleShoppingListClicks());
