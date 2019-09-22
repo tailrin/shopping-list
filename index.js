@@ -15,7 +15,7 @@ $('#js-shopping-list-form').on('submit', event => {
       </li>`
   $('.shopping-list').append(x);
   $('#shopping-list-entry').val('');
-  handleShoppingListClicks();
+  //handleShoppingListClicks();
 });
 
 
