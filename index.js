@@ -19,23 +19,19 @@ $('#js-shopping-list-form').on('submit', event => {
 });
 
 
-function handleDeleteClicks(){
+function handleShoppingListClicks(){
   $('.shopping-item-delete').click(e => {
     e.preventDefault();
     $(e.currentTarget).closest('li').remove();
   });
-} 
 
-function handleCheckClicks(){
-   $('.shopping-item').click(e => {
-       e.preventDefault();
-console.log(e.currentTarget).closest('div');
-      $(e.currentTarget).closest('div').siblings().first().
-toggleClass('shopping-item__checked'); 
+  
+} 
+$('.shopping-list').click(e => {
+    e.preventDefault();
+    if(e.target.className == 'shopping-item-toggle' || e.target.className == 'button-label'){
+      $(e.target).closest('div').siblings().first().toggleClass('shopping-item__checked');
+      }
   });
-}
-function handleShoppingListClicks(){
-  handleCheckClicks();
-  handleDeleteClicks();
-}
-$(handleShoppingListClicks());
+
+handleShoppingListClicks();
