@@ -15,7 +15,7 @@ $('#js-shopping-list-form').on('submit', event => {
       </li>`
   $('.shopping-list').append(x);
   $('#shopping-list-entry').val('');
-  handleShoppingListClicks();
+  //handleShoppingListClicks();
 });
 
 
@@ -27,7 +27,7 @@ function handleShoppingListClicks(){
 
   $('.shopping-item-controls').click(e => {
     e.preventDefault();
-    $(e.currentTarget).parent().children().first().toggleClass('shopping-item__checked');
+    $(e.currentTarget).siblings().first().toggleClass('shopping-item__checked');
     
   });
 } 
